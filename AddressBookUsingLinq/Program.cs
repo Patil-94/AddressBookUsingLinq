@@ -17,7 +17,6 @@ namespace AddressBookUsingLinq
 
 
             Contact contact = new Contact();
-            Console.WriteLine("Enter the City ");
             contact.City = Console.ReadLine();
             addressBookDataTable.sortContactByGivenCity(contact);
 
