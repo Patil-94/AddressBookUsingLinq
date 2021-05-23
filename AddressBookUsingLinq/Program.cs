@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,9 @@ namespace AddressBookUsingLinq
         {
             Console.WriteLine("***************Welcome To AddressBook Using Linq*************");
             AddressBookDataTable addressBookDataTable = new AddressBookDataTable();
-            addressBookDataTable.createAddressBookTable();
+            DataTable table = addressBookDataTable.createAddressBookTable();
+            addressBookDataTable.editContact(table);
+
             Console.Read();
         }
     }
