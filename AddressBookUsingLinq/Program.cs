@@ -14,12 +14,16 @@ namespace AddressBookUsingLinq
             Console.WriteLine("***************Welcome To AddressBook Using Linq*************");
             AddressBookDataTable addressBookDataTable = new AddressBookDataTable();
             DataTable table = addressBookDataTable.createAddressBookTable();
-           // addressBookDataTable.editContact(table);
-            Contact contact = new Contact();
+          
 
-            Console.WriteLine("Enter the first name = ");
-            contact.FirstName = Console.ReadLine();
-            addressBookDataTable.deleteParticularContact(contact);
+            Contact contact = new Contact();
+            Console.WriteLine("Enter the City  ");
+            contact.City = Console.ReadLine();
+            addressBookDataTable.retrieveContactByCity(contact);
+
+            //Console.WriteLine("Enter the first name = ");
+            //contact.FirstName = Console.ReadLine();
+            //addressBookDataTable.deleteParticularContact(contact);
 
             Console.Read();
         }
