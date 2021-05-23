@@ -67,6 +67,17 @@ namespace AddressBookUsingLinq
                 displayAddressBook();
             }
         }
+        public void deleteParticularContact(Contact contact)
+        {
+            var recordData = dataTable.AsEnumerable().Where(data => data.Field<string>("FirstName") == contact.FirstName).First();
+            if (recordData != null)
+            {
+                recordData.Delete();
+                Console.WriteLine("Delete contact successfully");
+                displayAddressBook();
+
+            }
+        }
     }
 
 }      
