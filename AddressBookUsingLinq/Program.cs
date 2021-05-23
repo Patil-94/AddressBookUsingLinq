@@ -16,10 +16,9 @@ namespace AddressBookUsingLinq
             DataTable table = addressBookDataTable.createAddressBookTable();
 
 
-            Contact contact = new Contact();
-            contact.City = Console.ReadLine();
-            addressBookDataTable.sortContactByGivenCity(contact);
+          Contact contact = new Contact();
 
+            addressBookDataTable.getCountByAddressBookType();
             Console.Read();
         }
     }
